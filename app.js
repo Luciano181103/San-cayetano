@@ -2,7 +2,7 @@ const products = [
     { id: 1, name: "Hamburguesa Comun", price: 1500, description: "Pan,mayonesa, lechuga, tomate, carne, queso, jamon (opcional a pedir: Salsa de ajo, salsa criolla)", category: "Hamburguesas" },
     { id: 2, name: "Hamburguesa Especial", price: 2000, description: "Pan, mayonesa, lechuga, tomate, carne, queso,huevo, jamon (opcional a pedir: Salsa de ajo, salsa criolla)", category: "Hamburguesas" },
     { id: 3, name: "Hamburguesa Super", price: 2500, description: "Pan, mayonesa, lechuga, tomate, carne x2, queso x2, morron,huevo, jamon, mostaza (opcional a pedir: Salsa de ajo, salsa criolla)", category: "Hamburguesas" },
-    { id: 4, name: "Pizza Comun", price: 3200, description: "Salsa, queso, troso de jamon, aceituna", category: "Pizzas" },
+    { id: 4, name: "Pizza Comun", price: 3200, description: "Salsa, queso, trozo de jamon, aceituna", category: "Pizzas" },
     { id: 5, name: "Pizza Especial", price: 400, description: "Salsa, queso, jamon, aceituna, huevo", category: "Pizzas" },
     { id: 6, name: "Pizza Super", price: 4500, description: "Salsa, jamon, queso, huevo, morron, aceituna", category: "Pizzas" },
     { id: 7, name: "Pizza Mozarella", price: 4000, description: "Pizza con mozzarella", category: "Pizzas" },
@@ -26,7 +26,7 @@ const products = [
     { id: 25, name: "1/2 Empanadas (Jamón y queso - Carne)", price: 3000, description: "Media docena de empanadas", category: "Varios" },
     { id: 26, name: "Porción de papas", price: 2500, description: "Porción de papas fritas", category: "Varios" },
     { id: 27, name: "Porción de papas c/cheddar", price: 3800, description: "Papas fritas con cheddar", category: "Varios" },
-    { id: 28, name: "Pancho", price: 1500, description: "Pancho (hot dog)", category: "Varios" },
+    { id: 28, name: "Pancho", price: 1500, description: "Pancho con mayonesa, kétchup, mostaza", category: "Varios" },
     { id: 29, name: "Carlito simple", price: 2000, description: "Pan miga, queso y jamon", category: "Varios" },
     { id: 30, name: "Carlito Triple", price: 3000, description: "Pan miga, lechuga, tomate, huevo, pan, jamon y queso", category: "Varios" },
     { id: 31, name: "3 Hambuguesas Comunes", price: 4000, description: "3 Hambuguesas Comunes", category: "Promociones" },
@@ -161,6 +161,10 @@ function sendWhatsAppMessage() {
     });
 
     message += `\nTotal del pedido: $${total}\n`;
+
+    message += `Número de orden: ${orderNumber}\n`;
+ 
+    orderNumber += 1;
     
 
     const deliveryOption = document.getElementById('delivery-option');
