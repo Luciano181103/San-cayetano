@@ -164,7 +164,6 @@ function sendWhatsAppMessage() {
 
     message += `Número de orden: ${orderNumber}\n`;
  
-    orderNumber += 1;
     
 
     const deliveryOption = document.getElementById('delivery-option');
