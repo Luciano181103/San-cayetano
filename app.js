@@ -43,7 +43,7 @@ const products = [
 ];
 
 let cart = [];
-let orderNumber = 1;
+let orderNumber = parseInt(localStorage.getItem('orderNumber')) || 1;
 
 // Función para reiniciar el número de orden a las 13:00 hs
 function checkForOrderReset() {
@@ -53,6 +53,7 @@ function checkForOrderReset() {
     
     if (currentHour === 13 && currentMinutes === 0) {
         orderNumber = 1;
+        localStorage.setItem('orderNumber', orderNumber);
     }
 }
 
@@ -164,8 +165,6 @@ function sendWhatsAppMessage() {
 
     message += `Número de orden: ${orderNumber}\n`;
  
-    
-
     const deliveryOption = document.getElementById('delivery-option');
     if (deliveryOption.checked) {
         message += 'Con envío a domicilio. Por favor, envíe su ubicación.\n';
@@ -174,6 +173,8 @@ function sendWhatsAppMessage() {
     }
 
     orderNumber++; // Incrementar el número de orden
+    localStorage.setItem('orderNumber', orderNumber); // Guardar el nuevo valor en localStorage
+
     const whatsappUrl = `https://wa.me/5493794214144?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
 }
