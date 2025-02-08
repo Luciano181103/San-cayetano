@@ -25,7 +25,7 @@ const products = [
     { id: 24, name: "Empanadas (Jamón y queso - Carne)", price: 7000, description: "Empanadas de jamón y queso o carne", category: "Varios" },
     { id: 25, name: "1/2 Empanadas (Jamón y queso - Carne)", price: 4000, description: "Media docena de empanadas", category: "Varios" },
     { id: 26, name: "Porción de papas", price: 3000, description: "Porción de papas fritas", category: "Varios" },
-    { id: 27, name: "Porción de papas c/cheddar", price: 4000, description: "Papas fritas con cheddar", category: "Varios" },
+    { id: 27, name: "Porción de papas c/cheddar", price: 4500, description: "Papas fritas con cheddar", category: "Varios" },
     { id: 28, name: "Pancho", price: 2000, description: "Pancho con mayonesa, kétchup, mostaza", category: "Varios" },
     { id: 29, name: "Carlito simple", price: 3000, description: "Pan miga, queso y jamon", category: "Varios" },
     { id: 30, name: "Carlito Triple", price: 4000, description: "Pan miga, lechuga, tomate, huevo, pan, jamon y queso", category: "Varios" },
